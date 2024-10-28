@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #00bfff;
+}
+
+.name {
+    font-size: 2em;
+    color: #00bfff;
+    margin: 10px 0;
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff;
+}
+
+.title {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+.about {
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.about h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00bfff;
+    text-shadow: 0 0 5px #00bfff;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+.skills h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00bfff;
+    text-shadow: 0 0 5px #00bfff;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-category {
+    width: 45%;
+}
+
+.skill-category h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #00bfff;
+    text-shadow: 0 0 5px #00bfff;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    padding: 5px 0;
+    border-bottom: 1px solid #444;
+    color: #ccc;
+}
+
+.lightning-effect {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0,191,255,1) 10%, transparent 70%);
+    opacity: 0.6;
+    filter: blur(100px);
+    animation: lightning 3s infinite;
+    z-index: 0;
+}
+
+@keyframes lightning {
+    0%, 100% {
+        transform: translate(-50px, -50px);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translate(100px, 100px);
+        opacity: 0.8;
+    }
+}
